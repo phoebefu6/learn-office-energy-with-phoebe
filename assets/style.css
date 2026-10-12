@@ -1365,3 +1365,8 @@ figure.zoomable.can-scroll figcaption::after {
 .oe-tstop { font-size: 0.88rem; color: var(--amber-ink); font-weight: 600; margin-top: 4px; }
 .oe-tclock { font: 800 1.6rem Inter, sans-serif; color: var(--indigo-deep); margin-top: 6px; font-variant-numeric: tabular-nums; }
 @media (max-width: 560px) { .oe-timer { grid-template-columns: 1fr; } .oe-tfig { max-width: 12rem; } }
+
+/* Prompt-box label sits inside the box (2026-10-12). Hanging it 0.7rem above the edge let any
+   overflow:auto parent cut it in half; in normal flow nothing can clip it. The right margin
+   keeps it clear of the Copy button; long labels wrap instead of running under it. */
+.prompt-box > .label{ position: static; display: table; margin: 0 5.2rem .55rem 0; white-space: normal; line-height: 1.45; }
